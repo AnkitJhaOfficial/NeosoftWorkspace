@@ -1,0 +1,11 @@
+.foot {
+	background: #00ccaa;
+	background: -webkit-linear-gradient(
+		to right,
+		#00ccaa,
+		#00a39a,
+		#008889,
+		#006b77
+	);
+	background: linear-gradient(to right, #00ccaa, #00a39a, #008889, #006b77);
+}

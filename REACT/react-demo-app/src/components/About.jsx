@@ -7,7 +7,7 @@ export default function About() {
         <div className="AboutUs">
             <DbAdminNavBar/>
             <h1>About DBAdmin</h1>  
-            <div className="contents">
+            <div className="AboutUs-content">
                 <h2>
                     WHO WE ARE
                 </h2>
