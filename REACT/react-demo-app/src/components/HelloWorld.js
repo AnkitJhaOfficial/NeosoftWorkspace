@@ -1,4 +1,6 @@
 import React from "react";
+import UseStateDemo from "./UseStateDemo";
+import ContactUsForm from "./ContactUsForm";
 
 const products = [
     { title: 'Cabbage', isFruit: false, id: 1 },
@@ -21,6 +23,8 @@ function HelloWorld(props){
         <div>
         <h1>Welcome To react App</h1>
         <ul>{listItems}</ul>
+        <UseStateDemo />
+        <ContactUsForm></ContactUsForm>
         </div>
     );
 }
