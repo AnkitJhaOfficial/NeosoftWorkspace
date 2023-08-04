@@ -1,7 +1,33 @@
-.AboutUs {
-  text-align: center;
-
+.content{
+  /* background-color: aquamarine; */
+  background: #00ccaa;
+  height: 100%;
+  padding: 0 10% 0 10%;
+  flex-direction: row;
+  display: flex;
 }
-.AboutUs-content{
-    
+/* .content{
+  align-items: flex-start;
+} */
+.images img{
+  width: 100%;
+  /* height: auto; */
+}
+
+.ItemsInRight{
+  /* background-color: white; */
+  padding: 50px 0 50px 20px;
+  text-align: left;
+  height: max-content;
+}
+
+.outerBox{
+  background: #00ccaa;
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+}
+
+.rightBox{
+  background-color: white;
 }

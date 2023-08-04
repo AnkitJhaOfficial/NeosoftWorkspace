@@ -2,30 +2,43 @@ import React, { useState } from "react";
 import "../styles/ContactUsForm.css";
 
 export default function ContactUsForm() {
-    const data = {
-        name:{
-          firstname:"",
-          lastname:""
-        },
-        email:"",
-        phone:""
-    }
+  const data = {
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: ""
+  }
 
-    const [formData, setFormData] = useState(data);
-  
-    const handleChange = (event) => {
-      const { name, value } = event.target;
-      console.log(event.target.value);
-      setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
-    };
-  
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      console.log(formData);
-      alert(`Name: ${formData.firstname}, Email: ${formData.email}`
-      );
+  const nestedData = {
+    name:{
+      firstname: "",
+      lastname: ""
+    },
+    email: "",
+    phone: ""
+  }
+  const [formData, setFormData] = useState(data);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    // console.log(event.target.value);
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
-  
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData);
+    setNestedData(formData);
+    console.log(nestedData);
+    // alert(`Name: ${formData.firstname}, Email: ${formData.email}`);
+  };
+
+  function setNestedData(data){
+    nestedData.name.firstname=data.firstname;
+    nestedData.name.lastname=data.lastname;
+    nestedData.email=data.email;
+    nestedData.phone=data.phone;
+  }
 
   return (
     <div>
@@ -95,9 +108,9 @@ export default function ContactUsForm() {
           news about out product via e-mail?
         </div>
         <div>
-        <input class="btn btn-primary me-2 mt-4" type="submit" value="Submit" onClick={handleSubmit}/>
-        <input class="btn btn-primary mt-4" type="reset" value="Reset" />
-      </div>
+          <input class="btn btn-primary me-2 mt-4" type="submit" value="Submit" onClick={handleSubmit} />
+          <input class="btn btn-primary mt-4" type="reset" value="Reset" />
+        </div>
       </div>
     </div>
   );
