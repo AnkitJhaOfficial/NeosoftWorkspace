@@ -1,0 +1,50 @@
+.person-left img{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+
+} 
+.person-right{
+    margin: 0 0% 0% 10%;
+    object-fit: cover; 
+    padding-top: 10px;
+    /* border: 1px;
+    border-style: solid;
+    border-color: blue; */
+}
+.card {
+    margin-top: 100px;
+    width: 36%;
+    margin: auto;
+    /* border: 5px; */
+    /* border-color: yellow; */
+    /* border-style: solid; */
+    box-shadow: 10px 10px 10px 10px #9458e4;
+    
+}
+.card button{
+    margin-top: 2%;
+    width: 100%;
+    background-color: #c689df;
+    opacity: 0.8;
+    text-align-last: center;
+}
+.person{
+    margin-top: 4%;
+    /* border: 1px;
+    border-style: solid;
+    border-color: red; */
+    flex-direction: row;
+    display: flex;
+}
+.person-left{
+    margin: 0 0 0 20%;
+    /* border: 1px;
+    border-style: solid;
+    border-color: blue; */
+}
+body {
+    background: linear-gradient(to bottom,#e63fe6,#af69ca);
+    padding-top: 3%;
+}

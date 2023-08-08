@@ -9,6 +9,22 @@ export default function ContactUsForm() {
     phone: ""
   }
 
+  const columns = [
+      {
+        table_name:"user",
+        column_name:"userId"
+      },
+      {
+        table_name:"user",
+        column_name:"userId"
+      },
+      {
+        table_name:"user",
+        column_name:"userId"
+      }
+      
+  ]
+
   const nestedData = {
     name:{
       firstname: "",
@@ -111,6 +127,9 @@ export default function ContactUsForm() {
           <input class="btn btn-primary me-2 mt-4" type="submit" value="Submit" onClick={handleSubmit} />
           <input class="btn btn-primary mt-4" type="reset" value="Reset" />
         </div>
+      </div>
+      <div>
+
       </div>
     </div>
   );
