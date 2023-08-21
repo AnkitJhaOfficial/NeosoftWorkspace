@@ -1,0 +1,78 @@
+.sidebar {
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 80%;
+	overflow: scroll;
+}
+
+/* Sidebar links */
+#anchor {
+	display: block;
+	color: black;
+	padding: 16px;
+	text-decoration: none;
+}
+
+/* Active/current link */
+#anchor.active {
+	background-color: #00ccaa;
+	background: -webkit-linear-gradient(
+		to right,
+		#00ccaa,
+		#00a39a,
+		#008889,
+		#006b77
+	);
+	background: linear-gradient(to right, #00ccaa, #00a39a, #008889, #006b77);
+	color: white;
+}
+
+/* Links on mouse-over */
+#anchor:hover:not(.active) {
+	background-color: #00a8c8;
+	color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+#divSidebar.content {
+	margin-left: 200px;
+	padding: 1px 16px;
+	height: 90vh;
+	
+}
+.queryform{
+	margin-bottom: 0%;
+	padding-bottom: 0%;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+	.sidebar {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	#anchor {
+		float: left;
+	}
+	#divSidebar.content {
+		margin-left: 0;
+	}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+	#anchor {
+		text-align: center;
+		float: none;
+	}
+}
+.bhagwaGradient {
+  background: -webkit-linear-gradient(to right, #fd4d13, #e93e23, #ea3b56, #cb4974);
+  background: linear-gradient(to right, #fd4d13, #e93e23, #ea3b56, #cb4974);
+  
+  
+  }
