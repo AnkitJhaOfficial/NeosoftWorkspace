@@ -16,21 +16,27 @@ public class ProductService {
 
     public final ProductRepository productRepository;
 
-
     public Product addProduct(Product product) {
         return productRepository.save(product);
     }
 
-    @Cacheable(key = "#id",value = "product")
+    @Cacheable(key = "#id", value = "Product")
     public Product getProductById(Long id) {
         return productRepository.findById(id).get();
     }
 
+    @Cacheable(value = "Product", key = "'Product'")
     public List<Product> getAllProduct() {
         return productRepository.findAll();
     }
 
-    @CacheEvict(key = "#id",value = "Product")
+    @CachePut(key = "#id", value = "Product")
+    public Product updateProductById(Long id, Product product) {
+        product.setId(id);
+        return productRepository.save(product);
+    }
+
+    @CacheEvict(key = "#id", value = "Product")
     public void deleteProductById(Long id) {
         productRepository.deleteById(id);
     }
